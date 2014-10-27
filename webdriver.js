@@ -1,9 +1,5 @@
 var webdriver = require('selenium-webdriver');
-
 var fs = require('fs');
-//debugger;
-//  var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
-// driver.manage().window().maximize();
 var tem;
 var browser;
 var result;
@@ -15,18 +11,23 @@ var isError = false;
 var url;
 var server;
 var capabilities;
+//  var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
+
 process.argv.forEach(function(val, index, array) {
   url = array[2];
   server = array[3];
   capabilities = array[4];
-});
+ });
 driver = new webdriver.Builder().
 usingServer(server + '/wd/hub').
 withCapabilities(capabilities).
 build();
-
+driver.manage().window().maximize();
 driver.get(url).then(function() {
   //get browser name and version
+  driver.wait(function() {
+    return driver.executeScript("return window.testsDone");
+  }, 50000);
   driver.executeScript('return window.navigator.appName').then(function(appName) {
     driver.executeScript('return window.navigator.userAgent').then(function(userAgent) {
       var browser = userAgent.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
@@ -34,7 +35,6 @@ driver.get(url).then(function() {
         browser[2] = tem[1];
       }
       browser = browser ? [browser[1], browser[2]] : [appName, driver.executeScript('return window.navigator.appVersion').then(function(c) {})];
-
       //get test suites
       driver.findElements(webdriver.By.xpath("//li[contains(@class,'suite')]")).then(function(suites) {
         suites.forEach(function(suite) {
@@ -46,8 +46,7 @@ driver.get(url).then(function() {
 
               tests.forEach(function(test) {
                 test.getAttribute("class").then(function(cl) {
-
-                  if (cl.indexOf("test pass fast") != -1) {
+                  if (cl.indexOf("test pass") != -1) {
                     result = "ok";
                     error = test;
 
@@ -64,15 +63,22 @@ driver.get(url).then(function() {
                         newErr = newErr.replace(/\n/g, "\n\t#");
                         text = text.replace(errtext, newErr);
                       }
-
+                      if (num == 14) {
+                        debugger;
+                      }
                       text = text.replace("\n‣", "");
                       map[num] = text;
                       tap = tap.concat(result + " " + num + " " + browser[0] + " " + browser[1] + " - " + suitename + " " + map[num] + "\n");
-                      fs.writeFileSync('result.tap', tap);
+                      fs.writeFile('result.tap', tap, function(err) {
+                        if (err) throw err;
+                        // console.log('Saved ' + suitename + text);
+                      });
+                      //console.log("tap ", tap);
                       num++;
                       isError = false;
                     });
                   });
+
                 });
               });
             });
@@ -80,7 +86,6 @@ driver.get(url).then(function() {
         });
       });
     });
-
     driver.quit();
   });
 });
