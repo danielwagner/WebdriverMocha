@@ -1,0 +1,97 @@
+ok 1 Chrome 38.0.2125.104 - Class DefineAnonymous
+ok 2 Chrome 38.0.2125.104 - Class ClassnameProperty
+ok 3 Chrome 38.0.2125.104 - Class AlternativeRoot
+ok 4 Chrome 38.0.2125.104 - Class merge methods of same class (statics optimization)
+ok 5 Chrome 38.0.2125.104 - Class merge methods of same class (statics optimization) respect defer
+ok 6 Chrome 38.0.2125.104 - Class define class with contructor
+ok 7 Chrome 38.0.2125.104 - Class define bootstrap class, which extends 'Error'
+ok 8 Chrome 38.0.2125.104 - Class extend from Bootstrap class
+ok 9 Chrome 38.0.2125.104 - Class extended Bootstap class should append members to the prototype
+not ok 10 Chrome 38.0.2125.104 - Class superclass calls aka basecalls (constructor and methods)
+	#TypeError: undefined is not a function
+	#    at new affe (http://172.17.14.104:7357/framework/source/test/tests/framework/Class.js:263:19)
+	#    at Context.<anonymous> (http://172.17.14.104:7357/framework/source/test/tests/framework/Class.js:292:15)
+	#    at callFn (http://172.17.14.104:7357/testem/mocha.js:4338:21)
+	#    at Test.Runnable.run (http://172.17.14.104:7357/testem/mocha.js:4331:7)
+	#    at Runner.runTest (http://172.17.14.104:7357/testem/mocha.js:4728:10)
+	#    at http://172.17.14.104:7357/testem/mocha.js:4806:12
+	#    at next (http://172.17.14.104:7357/testem/mocha.js:4653:14)
+	#    at http://172.17.14.104:7357/testem/mocha.js:4663:7
+	#    at next (http://172.17.14.104:7357/testem/mocha.js:4601:23)
+	#    at http://172.17.14.104:7357/testem/mocha.js:4630:5
+ok 11 Chrome 38.0.2125.104 - Class FunctionWrap
+ok 12 Chrome 38.0.2125.104 - Class DefineShadowedStatics
+ok 13 Chrome 38.0.2125.104 - Class PropertyInit
+ok 14 Chrome 38.0.2125.104 - Class PropertyReset
+ok 15 Chrome 38.0.2125.104 - Class PropertyNullable
+ok 16 Chrome 38.0.2125.104 - Class PropertyApply
+ok 17 Chrome 38.0.2125.104 - Class PropertyEventEmitter
+ok 18 Chrome 38.0.2125.104 - Class PropertyEventFail
+ok 19 Chrome 38.0.2125.104 - Class PropertyChecks
+ok 20 Chrome 38.0.2125.104 - Class PropertyCheckFunction
+ok 21 Chrome 38.0.2125.104 - Class PropertyRefine
+ok 22 Chrome 38.0.2125.104 - Class PropertyOverrideMethod
+ok 23 Chrome 38.0.2125.104 - Class PropertyInheritance
+ok 24 Chrome 38.0.2125.104 - Class ClassDefined
+ok 25 Chrome 38.0.2125.104 - Class ValidateConfig
+ok 26 Chrome 38.0.2125.104 - Class DefaultConstructor
+ok 27 Chrome 38.0.2125.104 - Class CustomPropertyGetter
+ok 28 Chrome 38.0.2125.104 - Class CustomPropertySetter
+ok 29 Chrome 38.0.2125.104 - Class Events
+ok 30 Chrome 38.0.2125.104 - Class MixinEvents
+ok 31 Chrome 38.0.2125.104 - Class MixinEventsOverride
+ok 32 Chrome 38.0.2125.104 - Class GenericSet
+ok 33 Chrome 38.0.2125.104 - Class GenericSetExists
+ok 1 Chrome 38.0.2125.104 - data.marshal.Json $$member
+ok 2 Chrome 38.0.2125.104 - data.marshal.Json LocalizedString
+ok 3 Chrome 38.0.2125.104 - data.marshal.Json ClassCreationSingle
+ok 4 Chrome 38.0.2125.104 - data.marshal.Json ClassCreationArray
+ok 5 Chrome 38.0.2125.104 - data.marshal.Json ClassCreationObject
+ok 6 Chrome 38.0.2125.104 - data.marshal.Json ClassCreationArrayWithObject
+ok 7 Chrome 38.0.2125.104 - data.marshal.Json ClassCreationAllSmoke
+ok 8 Chrome 38.0.2125.104 - data.marshal.Json ModelWithNumber
+ok 9 Chrome 38.0.2125.104 - data.marshal.Json ModelWithBoolean
+ok 10 Chrome 38.0.2125.104 - data.marshal.Json ModelWithString
+ok 11 Chrome 38.0.2125.104 - data.marshal.Json ModelWithPrimitive
+ok 12 Chrome 38.0.2125.104 - data.marshal.Json ModelWithArrayPrimitive
+ok 13 Chrome 38.0.2125.104 - data.marshal.Json ModelWithArrayArray
+ok 14 Chrome 38.0.2125.104 - data.marshal.Json ModelWithObjectPrimitive
+ok 15 Chrome 38.0.2125.104 - data.marshal.Json ModelWithObjectArray
+ok 16 Chrome 38.0.2125.104 - data.marshal.Json ModelWithArrayObject
+ok 17 Chrome 38.0.2125.104 - data.marshal.Json ModelWithObjectObject
+ok 18 Chrome 38.0.2125.104 - data.marshal.Json ModelWithAllSmoke
+ok 19 Chrome 38.0.2125.104 - data.marshal.Json BubbleEventsDepth1
+ok 20 Chrome 38.0.2125.104 - data.marshal.Json BubbleEventsDepth2
+ok 21 Chrome 38.0.2125.104 - data.marshal.Json BubbleEventsDepth3
+ok 22 Chrome 38.0.2125.104 - data.marshal.Json BubbleEventsArrayDepth1
+ok 23 Chrome 38.0.2125.104 - data.marshal.Json BubbleEventsArrayDepth2
+ok 24 Chrome 38.0.2125.104 - data.marshal.Json BubbleEventsArrayDepthAlot
+ok 25 Chrome 38.0.2125.104 - data.marshal.Json BubbleEventsArrayDepthAlotMix
+ok 26 Chrome 38.0.2125.104 - data.marshal.Json BubbleEventsArrayLong
+ok 27 Chrome 38.0.2125.104 - data.marshal.Json BubbleEventsArrayReorder
+ok 28 Chrome 38.0.2125.104 - data.marshal.Json BubbleEventsWithRemove
+ok 29 Chrome 38.0.2125.104 - data.marshal.Json QooxdooObject
+ok 30 Chrome 38.0.2125.104 - data.marshal.Json ValidIdentifier
+ok 31 Chrome 38.0.2125.104 - data.marshal.Json GetModelClass
+ok 32 Chrome 38.0.2125.104 - data.marshal.Json GetModelClassDepth
+ok 33 Chrome 38.0.2125.104 - data.marshal.Json GetModelClassIgnore
+ok 34 Chrome 38.0.2125.104 - data.marshal.Json GetModelSuperClass
+ok 35 Chrome 38.0.2125.104 - data.marshal.Json GetModelMixins
+ok 36 Chrome 38.0.2125.104 - data.marshal.Json GetPropertyMapping
+not ok 37 Chrome 38.0.2125.104 - data.marshal.Json IgnoreParent
+	#AssertionError: expected null to not equal null
+	#    at Function.assert.isNotNull (http://172.17.14.104:7357/framework/source/test/node_modules/chai/chai.js:2623:36)
+	#    at Context.<anonymous> (http://172.17.14.104:7357/framework/source/test/tests/framework/Class.js:1993:18)
+	#    at qx.Class.define.members.__mS (http://172.17.14.104:7357/framework/build/script/qx.js:12:174875)
+	#    at qx.Class.define.members.__mO (http://172.17.14.104:7357/framework/build/script/qx.js:12:173654)
+	#    at qx.Class.define.members.toClass (http://172.17.14.104:7357/framework/build/script/qx.js:12:173399)
+	#    at Context.<anonymous> (http://172.17.14.104:7357/framework/source/test/tests/framework/Class.js:2015:17)
+	#    at callFn (http://172.17.14.104:7357/testem/mocha.js:4338:21)
+	#    at Test.Runnable.run (http://172.17.14.104:7357/testem/mocha.js:4331:7)
+	#    at Runner.runTest (http://172.17.14.104:7357/testem/mocha.js:4728:10)
+	#    at http://172.17.14.104:7357/testem/mocha.js:4806:12
+ok 38 Chrome 38.0.2125.104 - data.marshal.Json IgnoreDepth
+ok 39 Chrome 38.0.2125.104 - data.marshal.Json IgnoreProperties
+ok 40 Chrome 38.0.2125.104 - data.marshal.Json BubbleSpliceRemoveAndAdd
+ok 41 Chrome 38.0.2125.104 - data.marshal.Json GetArrayClassSimple
+ok 42 Chrome 38.0.2125.104 - data.marshal.Json GetArrayClassAdvanced
