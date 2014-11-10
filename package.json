@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "using webdriver to start mocha tests",
   "devDependencies": {
-    "selenium-webdriver": "^2.44.0"
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1",
+    "webdriver-sync": "^0.15.0"
   },
   "launch_in_dev": [
     "node"

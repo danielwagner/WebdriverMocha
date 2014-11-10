@@ -1,3 +1,9 @@
+/**
+ *  example:
+ *  mocha test.js --"http://<url>" --"http://<server>" --'{"browserName":"<browser>"}'
+ *
+ */
+
 var webdr = module.exports = {};
 webdr.setup = function (wd){
 
@@ -11,7 +17,7 @@ webdr.setup = function (wd){
 		if(args[i].indexOf("--")==0){
 			args[i]= args[i].slice(2);
 		}
-	}	
+	}
 	if(args[3].indexOf("no-timeout") == 0){
 		url = args[4];
 		server = args[5];
@@ -24,7 +30,7 @@ webdr.setup = function (wd){
 
 	var capability = new wd.DesiredCapabilities().firefox();
 	for (var key in caps) {
-	  capability.setCapability(key,caps[key]);   
+	  capability.setCapability(key,caps[key]);
 	}
 	driver = new wd.RemoteWebDriver(server + "/wd/hub", capability);
 	driver.manage().window().maximize();
