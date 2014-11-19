@@ -17,8 +17,8 @@ var capabilities;
 driver = webdrSetup.setup(wd);
 wd.wait(function() {
     return driver.executeScript("return window.testsDone");
-},{ timeout: 50000, period: 100 });
- 
+},{ timeout: 500000, period: 100 });
+
 var appName = driver.executeScript('return window.navigator.appName');
 var userAgent = driver.executeScript('return window.navigator.userAgent');
 var browser = userAgent.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
@@ -51,8 +51,8 @@ tests.forEach(function(test) {
     text = text.replace("\n‣", "");
     map[num] = text;
     tap = tap.concat(result + " " + num + " " + browser[0] + " " + browser[1] + " - " + suitename + " " + map[num] + "\n");
-    console.log(tap);
-    fs.writeFileSync('result1.tap', tap);
      num++;
 });
 });
+fs.writeFileSync('result1.tap', tap);
+driver.quit();
